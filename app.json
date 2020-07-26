@@ -1,0 +1,19 @@
+{
+  "name": "instagram",
+  "displayName": "instagram",
+  "expo": {
+    "name": "instagram",
+    "slug": "instagram",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "packagerOpts":{
+      "sourceExts":[
+        "ts",
+        "tsx"
+      ],
+      "transformer":"node_modules/react-native-typescript-transformer/index.js"
+    }
+  }
+}
