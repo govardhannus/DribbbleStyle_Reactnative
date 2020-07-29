@@ -40,7 +40,7 @@ constructor(props:Props){
   }
 
   dridddleList(refresh:Boolean) {
-    axios.get("https://api.dribbble.com/v2/user/shots?page="+this.state.pages+"&access_token=04421eae72868ea04ad20aa673ddd5bb633ed7032dc27212f385039e080d7f49")   
+    axios.get("https://api.dribbble.com/v2/user/shots?per_page=3&page="+this.state.pages+"&access_token=04421eae72868ea04ad20aa673ddd5bb633ed7032dc27212f385039e080d7f49")   
     .then(response => {
      if(refresh == false){
       this.setState({
@@ -101,7 +101,7 @@ handleLoadMore(){
         onRefresh={() => this.onRefresh()}
         refreshing={this.state.refreshing}
         onEndReached={() => this.handleLoadMore()}
-        onEndReachedThreshold={0}
+        onEndReachedThreshold={0.5}
         contentContainerStyle={{ paddingBottom: 30}}
       />
       </View>
